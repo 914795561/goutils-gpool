@@ -13,8 +13,8 @@ var runTimes = 1000000
 func task(i int) func() {
 	return func() {
 		defer wg.Done()
-		for i := 0; i < 100; i++ {
-			atomic.AddInt64(&sum, int64(i))
+		for a := 0; a < 100; a++ {
+			atomic.AddInt64(&sum, int64(a))
 		}
 	}
 
